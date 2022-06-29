@@ -12,6 +12,7 @@ if (myLocalStorage) {
     renderLeads(myLeads)
 }
 
+//An addEventListener that implements the chrome tab API to save link to local storage and output to html
 tabEl.addEventListener("click", function() {
     // chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
     // This implements the chrome API which grabs hold of the current tab URL
@@ -28,6 +29,7 @@ resetEl.addEventListener("dblclick", function() {
     ulEl.innerHTML = "";
 })
 
+//This addEventListener is the basic implementation of saving a link
 inputButton.addEventListener("click", function() {
     myLeads.push(inputEl.value);
     inputEl.value = '';
