@@ -13,7 +13,8 @@ if (myLocalStorage) {
 }
 
 tabEl.addEventListener("click", function() {
-    // chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    // chrome.tabs.query({active: true, currentWindow: true}, function(tabs)
+    // This implements the chrome API which grabs hold of the current tab URL
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         myLeads.push(tabs[0].url)
         localStorage.setItem("myLeads", JSON.stringify(myLeads))
